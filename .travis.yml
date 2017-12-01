@@ -10,4 +10,4 @@ cache:
 
 install: "mvn -B clean"
 
-script: "travis_wait 40 mvn -B install"
+script: "mvn -B install -Dmaven.javadoc.skip=true"
