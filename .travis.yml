@@ -10,4 +10,4 @@ cache:
 
 install: "mvn -B clean"
 
-script: "mvn -B install"
+script: "travis_wait 40 mvn -B install"
