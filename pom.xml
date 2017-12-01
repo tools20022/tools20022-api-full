@@ -42,10 +42,20 @@
 
 	<build>
 		<plugins>
-			<!-- Add source and javadoc -->
+			<plugin>
+    				<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-compiler-plugin</artifactId>
+    				<version>3.7.0</version>
+    				<configuration>
+      					<fork>true</fork>
+      					<meminitial>1024m</meminitial>
+      					<maxmem>6144m</maxmem>
+    				</configuration>
+  			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
+    				<version>3.0.1</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -58,12 +68,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+    				<version>3.0.0-M1</version>
 				<configuration>
 					<links>
 						<link>http://docs.oracle.com/javase/8/docs/api</link>
 					</links>
 					<additionalparam>--allow-script-in-comments -Xdoclint:none</additionalparam>
-					<additionalJOption>-J-Xmx4096m</additionalJOption>
+					<additionalJOption>-J-Xmx6144m</additionalJOption>
 
 					<!-- GA Tracking code -->
 					<header>
@@ -104,6 +115,7 @@
 
 					<nohelp>true</nohelp>
 					<splitindex>true</splitindex>
+					<quiet>true</quiet>					
 					<validateLinks>true</validateLinks>
 					<version>${project.version}</version>
 					<windowtitle>Tools20022 - Java API for ISO 20022</windowtitle>
