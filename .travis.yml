@@ -4,4 +4,6 @@ sudo: required
 language: java
 jdk: openjdk8
 
-script: "mvn -B test"
+install: true
+
+script: "mvn -B install"
