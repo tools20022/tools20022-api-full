@@ -4,6 +4,10 @@ sudo: required
 language: java
 jdk: openjdk8
 
+cache:
+  directories:
+  - $HOME/.m2
+
 install: "mvn -B clean"
 
 script: "mvn -B install"
